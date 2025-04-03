@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Neural Network Visualization</title>
+    <link rel="icon" href="neural-network.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Interactive Neural Network</h1>
+      <div class="intro">
+        <p>
+          Explore how a neural network works! Adjust the settings below to see
+          how layers, neurons, and connections behave. Hover over the nodes and
+          connections in the visualization to learn more.
+        </p>
+      </div>
+
+      <div class="section-title">Network Configuration</div>
+      <div class="controls">
+        <div
+          class="control-group"
+          title="Number of layers in the network (including input and output)"
+        >
+          <label for="layers">Layers:</label>
+          <input type="range" id="layers" min="2" max="6" value="3" step="1" />
+          <div class="value-display" id="layers-value">3</div>
+        </div>
+
+        <div
+          class="control-group"
+          title="Number of neurons (nodes) in each hidden layer"
+        >
+          <label for="neurons">Neurons per Layer:</label>
+          <input
+            type="range"
+            id="neurons"
+            min="2"
+            max="12"
+            value="5"
+            step="1"
+          />
+          <div class="value-display" id="neurons-value">5</div>
+        </div>
+
+        <div class="control-group" title="How signals move through the network">
+          <label for="activation">Activation Pattern:</label>
+          <select id="activation">
+            <option value="random">Random</option>
+            <option value="wave">Wave</option>
+            <option value="sequential">Sequential</option>
+          </select>
+        </div>
+
+        <div class="control-group" title="Speed of the animation">
+          <label for="animation-speed">Animation Speed:</label>
+          <input
+            type="range"
+            id="animation-speed"
+            min="0.1"
+            max="2"
+            value="1"
+            step="0.1"
+          />
+          <div class="value-display" id="speed-value">1.0</div>
+        </div>
+      </div>
+
+      <div class="section-title">Appearance</div>
+      <div class="controls">
+        <div class="control-group" title="Color of the neurons (nodes)">
+          <label for="node-color">Node Color:</label>
+          <input
+            type="color"
+            id="node-color"
+            class="color-picker"
+            value="#00b0ff"
+          />
+        </div>
+
+        <div
+          class="control-group"
+          title="Color of the connections between nodes"
+        >
+          <label for="edge-color">Connection Color:</label>
+          <input
+            type="color"
+            id="edge-color"
+            class="color-picker"
+            value="#4f5b62"
+          />
+        </div>
+
+        <div
+          class="control-group"
+          title="Brightness of the glow effect on active nodes"
+        >
+          <label for="glow-intensity">Glow Intensity:</label>
+          <input
+            type="range"
+            id="glow-intensity"
+            min="0.5"
+            max="3"
+            value="1.0"
+            step="0.1"
+          />
+          <div class="value-display" id="glow-value">1.0</div>
+        </div>
+      </div>
+
+      <div class="canvas-container">
+        <canvas id="neural-network"></canvas>
+        <div id="tooltip" class="tooltip"></div>
+      </div>
+
+      <div class="controls" style="margin-top: 20px">
+        <button id="reset" class="button" title="Reset all settings to default">
+          Reset Network
+        </button>
+      </div>
+
+      <div class="footer">
+        &copy; 2025 Rijul Mahajan | Visit my
+        <a href="https://github.com/rijul-mahajan" target="_blank">GitHub</a>
+        for more projects.
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
