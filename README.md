@@ -60,7 +60,7 @@ The tool is beginner-friendly and educational, offering tooltips and real-time f
 
 ## Demo
 
-Try the live demo [here](#https://rijul-mahajan.github.io/Interactive-Neural-Network-Animation/).
+Try the live demo [here](https://rijul-mahajan.github.io/Interactive-Neural-Network/).
 
 ---
 
@@ -155,7 +155,7 @@ Feel free to open issues for bug reports or feature requests!
 
 ## License
 
-This project is licensed under the MIT License. See [LICENSE](#https://opensource.org/license/mit) for details.
+This project is licensed under the MIT License. See [LICENSE](https://opensource.org/license/mit) for details.
 
 ---
 
